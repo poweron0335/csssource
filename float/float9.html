@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체 요소에 box-sizing 설정 */
+      * {
+        box-sizing: border-box;
+      }
+      /* header 요소 : 배경색#333, 안쪽여백30, 가운데 정렬, 글꼴 크기 35, 글자색 흰색 */
+      header {
+        background-color: #333;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      /* nav 요소 : 높이 500px, 배경색#ccc, 안쪽여백20 */
+      nav {
+        width: 30%;
+        height: 500px;
+        background-color: #ccc;
+        padding: 20px;
+        float: left;
+      }
+      /* article 요소 : 높이 500px, 배경색#f1f1f1, 안쪽여백 20 */
+      article {
+        width: 70%;
+        height: 500px;
+        background-color: #f1f1f1;
+        padding: 20px;
+        float: left;
+      }
+      /* article {
+        width: auto;
+        height: 500px;
+        background-color: #f1f1f1;
+        padding: 20px;
+      } */
+      /* footer 요소 : 배경색#777, 안쪽여백10, 가운데정렬, 글자색 흰색 */
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      .clearfix::after {
+        contain: '';
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Cities</h2>
+    </header>
+    <section class="clearfix">
+      <nav>
+        <ul>
+          <li><a href="#">London</a></li>
+          <li><a href="#">Paris</a></li>
+          <li><a href="#">Tokyo</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h1>London</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium excepturi voluptatem maiores minima suscipit quod, possimus
+          molestiae sed tempore nobis optio, quaerat ipsum officia deleniti nulla aliquam, consequuntur inventore!
+        </p>
+        <!-- lorem100 -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima itaque, in culpa, voluptatibus doloremque ut est numquam nulla excepturi
+          deserunt iste sequi! Quis architecto, facere voluptatum, eaque quas debitis cum sunt voluptatibus fugit quaerat temporibus? Deserunt
+          provident expedita sed aspernatur minus, praesentium natus iure dolorem repellat? Dolore quas tenetur quam rerum nam perferendis
+          repellendus, omnis eligendi, iure vero sit labore maiores cum et? Reprehenderit totam aperiam temporibus enim eos inventore molestias
+          accusamus neque architecto hic laboriosam, soluta consequuntur vitae maiores animi dolore incidunt. Cum nulla quae eum aspernatur suscipit,
+          quas sequi culpa, laboriosam in labore sapiente asperiores placeat magnam voluptate.
+        </p>
+      </article>
+    </section>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
