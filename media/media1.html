@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        /* 961px~ */
+        background: yellow;
+        height: 100px;
+      }
+      @media screen and (max-width: 960px) {
+        /* 721px ~ 960px */
+        .container {
+          background: yellowgreen;
+        }
+      }
+      @media screen and (max-width: 720px) {
+        /* 541px ~ 720px */
+        .container {
+          background: blueviolet;
+        }
+      }
+      @media screen and (max-width: 540px) {
+        /* 0 ~ 540px */
+        .container {
+          background: aquamarine;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 반응형 웹 -- 미디어쿼리
+        1. <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        2. 미디어쿼리
+    -->
+    <div class="container"></div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* column : 너비 25%, 안쪽 여백 20 */
+      .column {
+        width: 25%;
+        padding: 20px;
+        float: left;
+      }
+      /* column 배경색 : #aaa, #bbb, #ccc, #ddd */
+      .column:first-child {
+        background-color: #aaa;
+      }
+      .column:nth-child(2) {
+        background-color: #bbb;
+      }
+      .column:nth-child(3) {
+        background-color: #ccc;
+      }
+      .column:nth-child(4) {
+        background-color: #ddd;
+      }
+
+      /* 601~992 2행 2열*/
+      @media screen and (max-width: 992px) {
+        .column {
+          width: 50%;
+        }
+      }
+      /* 0~600 4행 1열*/
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>미디어 쿼리</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sequi, ipsam amet asperiores quidem nesciunt ab beatae cum architecto dolores
+      tempore provident ratione minima aspernatur hic consequuntur minus commodi soluta!
+    </p>
+    <div class="row">
+      <div class="column">
+        <h2>Column 1</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column">
+        <h2>Column 2</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column">
+        <h2>Column 3</h2>
+        <p>Some text..</p>
+      </div>
+      <div class="column">
+        <h2>Column 4</h2>
+        <p>Some text..</p>
+      </div>
+    </div>
+  </body>
+</html>
