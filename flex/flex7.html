@@ -5,89 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      /* .container {
-        display: flex;
-
-        border: 2px solid;
-      }
-      .container div {
-        width: 100px;
-        height: 100px;
-        border: 4px dashed red;
-        border-radius: 10px;
-        font-size: 30px;
-      } */
-      /* 배경색 */
-      .item:nth-child(1) {
-        background-color: aquamarine;
-        /* order: 1; */
-      }
-      .item:nth-child(2) {
-        background-color: lightpink;
-      }
-      .item:nth-child(3) {
-        background-color: blueviolet;
-      }
-      .item:nth-child(4) {
-        background-color: gold;
-        /* order: 1; */
-      }
-      /* flex-grow */
-      /* .parent1 .item:nth-child(1) {
-        flex-grow: 0;
-      }
-      .parent1 .item:nth-child(2) {
-        flex-grow: 0;
-      }
-      .parent1 .item:nth-child(3) {
-        flex-grow: 0;
-      }
-      .parent1 .item:nth-child(4) {
-        flex-grow: 1;
-      }
-
-      .parent2 .item:nth-child(1) {
-        flex-grow: 1;
-      }
-      .parent2 .item:nth-child(2) {
-        flex-grow: 3;
-      }
-      .parent2 .item:nth-child(3) {
-        flex-grow: 1;
-      }
-      .parent2 .item:nth-child(4) {
-        flex-grow: 0;
-      }
-
-      .parent3 .item:nth-child(1) {
-        flex-grow: 1;
-      }
-      .parent3 .item:nth-child(2) {
-        flex-grow: 2;
-      }
-      .parent3 .item:nth-child(3) {
-        flex-grow: 1;
-      }
-      .parent3 .item:nth-child(4) {
-        flex-grow: 2;
-      } */
-
-      /* flex-shrink / align-items 기본값 사용 */
       .container {
         display: flex;
-
         border: 2px solid;
       }
-      .container div {
+      .container .item {
         background-color: dodgerblue;
-        width: 100px;
-        margin: 10px;
+        /* width: 100px; */
         border: 4px dashed red;
         border-radius: 10px;
         font-size: 30px;
+
+        flex-grow: 1;
+        flex-basis: 0;
       }
-      .parent4 .item:nth-child(3) {
-        flex-shrink: 0;
+
+      /* width 100, height 100, 배경색 임의 */
+      .container + div .item {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        font-size: 30px;
+        /* text-align: center; */
+        /* line-height: 100px; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -119,33 +63,17 @@
                           item 이 가변너비일 때 의미가 있다.
            - flex-shrink : item 너비 감소 비율 (기본값 1)
                           값이 높을 수록 많은 너비가 감소
+           - flex=basis : flex-grow:1 로 설정한 경우 content 가 가지고 있는 부분을 제외한 여백을 나눠가지는 형태
+                          전체 아이템의 너비가 일정치 않게 됨(컨텐츠의 너비가 다를 수 있기 때문에)
+                          ==> 이걸 해결하기 위해 사용(컨텐츠를 포함한 영역의 너비 설정)
      -->
-    <div class="container parent1">
-      <div class="item">A</div>
-      <div class="item">B</div>
-      <div class="item">C</div>
-      <div class="item">D</div>
+    <div class="container">
+      <div class="item item1">Good job</div>
+      <div class="item item2">B</div>
+      <div class="item item3">Hello World</div>
     </div>
-    <div class="container parent2">
+    <div>
       <div class="item">A</div>
-      <div class="item">B</div>
-      <div class="item">C</div>
-      <div class="item">D</div>
-    </div>
-    <div class="container parent3">
-      <div class="item">A</div>
-      <div class="item">B</div>
-      <div class="item">C</div>
-      <div class="item">D</div>
-    </div>
-    <div class="container parent4">
-      <div class="item">A</div>
-      <div class="item">B</div>
-      <div class="item">C</div>
-      <div class="item">D</div>
-      <div class="item">E</div>
-      <div class="item">F</div>
-      <div class="item">G</div>
     </div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, reprehenderit quos, sequi incidunt sint eius fugiat repellendus, corporis ipsam
